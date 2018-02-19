@@ -30,17 +30,12 @@ public class ListaActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_lista);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_lista);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-
-        //para ocultar o cabeçalho
-        //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setSupportActionBar(toolbar);
 
         //Lista de Estúdios
         Estudio estudio1 = new Estudio("Estúdio Tupira","Rua YYY, Santo Agostinho", "25");
